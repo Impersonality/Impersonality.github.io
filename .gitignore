@@ -1,0 +1,4 @@
+node_modules
+blog/public
+blog/.deploy_git
+blog/node_modules
