@@ -18,6 +18,12 @@ tags:
 
 home/end：ctrl + A/E  (fn + ←→)
 
+切换输入法：ctrl + space
+
+全屏：ctrl + command + f
+
+最小化：command + m
+
 
 
 ##### chrome快捷键
