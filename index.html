@@ -151,6 +151,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-go-viper-cobra-flag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/22/go-viper-cobra-flag/">go viper/cobra/flag</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/22/go-viper-cobra-flag/" class="archive-article-date">
+  	<time datetime="2021-03-22T13:18:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="go-viper-cobra-flag"><a href="#go-viper-cobra-flag" class="headerlink" title="go viper / cobra / flag"></a>go viper / cobra / flag</h3><h4 id="viper"><a href="#viper" class="headerlink" title="viper"></a>viper</h4><p><a target="_blank" rel="noopener" href="https://blog.biezhi.me/2018/10/load-config-with-viper.html">viper</a></p>
+<p>获取值：viper.Get()</p>
+<p>设置待读取配置文件名：vipser.SetconfigName()</p>
+<p>设置搜索路径：viper.AddConfigPath(“.”)</p>
+<p>读取配置数据（必需）：viper.ReadInConfig()</p>
+<h4 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h4><p><a target="_blank" rel="noopener" href="https://o-my-chenjian.com/2017/09/20/Using-Flag-And-Pflag-With-Golang/">flag</a></p>
+<p>flag.Int(name, value, usage)：代码中可以设置默认值，然后从命令行读取实际值，当作环境变量使用</p>
+<h4 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h4><p><a target="_blank" rel="noopener" href="https://www.qikqiak.com/post/create-cli-app-with-cobra/">cobra</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sparkdev/p/10856077.html">cobra</a></p>
+<p>1.用cobra脚手架cobra init –pkg-name [name] 生成cmd文件夹</p>
+<p>2.root.go中包含rootCmd，这是根命令，cmd.AddCommand生成子命令</p>
+<p>3.command执行是通过command.run实现，在run前后还有几个方法，执行顺序是：</p>
+<p>​    1.persistentPreRun    2.PreRun    3.Run    4.PostRun    5.PersistentPostRun    </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">go</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/22/go-viper-cobra-flag/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mac常用快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -176,6 +262,9 @@
 <p>切换程序：command + tab</p>
 <p>搜索：command + space（搜索term</p>
 <p>home/end：ctrl + A/E  (fn + ←→)</p>
+<p>切换输入法：ctrl + space</p>
+<p>全屏：ctrl + command + f</p>
+<p>最小化：command + m</p>
 <h5 id="chrome快捷键"><a href="#chrome快捷键" class="headerlink" title="chrome快捷键"></a>chrome快捷键</h5><p>前进后退：command + ←→</p>
 <p>刷新：command + r</p>
 
@@ -524,6 +613,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">go</a>
               </li>
             
             <div class="clearfix"></div>

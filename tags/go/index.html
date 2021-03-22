@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
-  <title>Tag: -git | </title>
+  <title>Tag: go | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title">
-<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/tags/git/index.html">
+<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/tags/go/index.html">
 <meta property="og:site_name">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
@@ -151,30 +151,39 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-git合作开发" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-go-viper-cobra-flag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/12/git%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91/">git合作开发</a>
+      <a class="article-title" href="/2021/03/22/go-viper-cobra-flag/">go viper/cobra/flag</a>
     </h1>
   
 
         
-        <a href="/2021/03/12/git%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91/" class="archive-article-date">
-  	<time datetime="2021-03-12T10:36:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-12</time>
+        <a href="/2021/03/22/go-viper-cobra-flag/" class="archive-article-date">
+  	<time datetime="2021-03-22T13:18:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="git-fork-vs-clone"><a href="#git-fork-vs-clone" class="headerlink" title="git fork vs clone"></a>git fork vs clone</h4><p>pull request是将自己远程库的修改推到其他人远程库，工作上合作开发常用</p>
-<p>fork是从其他人远程库在github（gitlab等）clone一个仓库</p>
-<p>clone是从其他人远程库clone在自己本地</p>
-<p>一般给开源项目做贡献等等，先fork到自己远程仓，有修改再提交pq</p>
+        <h3 id="go-viper-cobra-flag"><a href="#go-viper-cobra-flag" class="headerlink" title="go viper / cobra / flag"></a>go viper / cobra / flag</h3><h4 id="viper"><a href="#viper" class="headerlink" title="viper"></a>viper</h4><p><a target="_blank" rel="noopener" href="https://blog.biezhi.me/2018/10/load-config-with-viper.html">viper</a></p>
+<p>获取值：viper.Get()</p>
+<p>设置待读取配置文件名：vipser.SetconfigName()</p>
+<p>设置搜索路径：viper.AddConfigPath(“.”)</p>
+<p>读取配置数据（必需）：viper.ReadInConfig()</p>
+<h4 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h4><p><a target="_blank" rel="noopener" href="https://o-my-chenjian.com/2017/09/20/Using-Flag-And-Pflag-With-Golang/">flag</a></p>
+<p>flag.Int(name, value, usage)：代码中可以设置默认值，然后从命令行读取实际值，当作环境变量使用</p>
+<h4 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h4><p><a target="_blank" rel="noopener" href="https://www.qikqiak.com/post/create-cli-app-with-cobra/">cobra</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sparkdev/p/10856077.html">cobra</a></p>
+<p>1.用cobra脚手架cobra init –pkg-name [name] 生成cmd文件夹</p>
+<p>2.root.go中包含rootCmd，这是根命令，cmd.AddCommand生成子命令</p>
+<p>3.command执行是通过command.run实现，在run前后还有几个方法，执行顺序是：</p>
+<p>​    1.persistentPreRun    2.PreRun    3.Run    4.PostRun    5.PersistentPostRun    </p>
 
       
 
@@ -188,7 +197,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">go</a>
         		</li>
       		
 		</ul>
@@ -198,7 +207,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/12/git%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/03/22/go-viper-cobra-flag/">展开全文 >></a>
         </p>
       
 
