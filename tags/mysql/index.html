@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
-  <title>Archives: 2021/1 | </title>
+  <title>Tag: mysql | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title">
-<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/archives/2021/01/index.html">
+<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/tags/mysql/index.html">
 <meta property="og:site_name">
 <meta property="og:locale" content="zh_CN">
 <meta name="twitter:card" content="summary">
@@ -151,27 +151,32 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-test-my-site" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mysql-一级索引-二级索引" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/03/test-my-site/">test_my_site</a>
+      <a class="article-title" href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/">Mysql 一级索引 二级索引</a>
     </h1>
   
 
         
-        <a href="/2021/01/03/test-my-site/" class="archive-article-date">
-  	<time datetime="2021-01-03T14:44:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-03</time>
+        <a href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/" class="archive-article-date">
+  	<time datetime="2021-03-27T07:46:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="Mysql-explain"><a href="#Mysql-explain" class="headerlink" title="Mysql explain"></a>Mysql explain</h4><p>转载：<a target="_blank" rel="noopener" href="https://blog.csdn.net/AAA821/article/details/86440722">https://blog.csdn.net/AAA821/article/details/86440722</a></p>
+<p>表物理上是一个b+树，innodb使用聚簇索引来组织表，默认使用主键作为聚簇索引</p>
+<p>未定义主键，则取第一个唯一索引，并且不包含Null。</p>
+<p>如果没有这样的列，innodb自建一个6位数的id值，并且是隐藏的。</p>
+<p>其他索引就是二级索引</p>
+
       
 
       
@@ -179,11 +184,22 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/01/03/test-my-site/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/">展开全文 >></a>
         </p>
       
 
@@ -236,8 +252,8 @@
 		mathjax: false,
 		isHome: false,
 		isPost: false,
-		isArchive: true,
-		isTag: false,
+		isArchive: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -310,6 +326,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
             <div class="clearfix"></div>

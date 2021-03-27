@@ -6,17 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
-  <title>Hello World | </title>
+  <title>Mysql 一级索引 二级索引 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Mysql explain转载：https:&#x2F;&#x2F;blog.csdn.net&#x2F;AAA821&#x2F;article&#x2F;details&#x2F;86440722 表物理上是一个b+树，innodb使用聚簇索引来组织表，默认使用主键作为聚簇索引 未定义主键，则取第一个唯一索引，并且不包含Null。 如果没有这样的列，innodb自建一个6位数的id值，并且是隐藏的。 其他索引就是二级索引">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/03/21/hello-world/index.html">
+<meta property="og:title" content="Mysql 一级索引 二级索引">
+<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Mysql explain转载：https:&#x2F;&#x2F;blog.csdn.net&#x2F;AAA821&#x2F;article&#x2F;details&#x2F;86440722 表物理上是一个b+树，innodb使用聚簇索引来组织表，默认使用主键作为聚簇索引 未定义主键，则取第一个唯一索引，并且不包含Null。 如果没有这样的列，innodb自建一个6位数的id值，并且是隐藏的。 其他索引就是二级索引">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-21T12:30:01.940Z">
-<meta property="article:modified_time" content="2021-03-21T12:30:01.940Z">
+<meta property="article:published_time" content="2021-03-27T07:46:35.000Z">
+<meta property="article:modified_time" content="2021-03-27T07:47:44.250Z">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
@@ -153,35 +154,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mysql-一级索引-二级索引" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Mysql 一级索引 二级索引
     </h1>
   
 
         
-        <a href="/2021/03/21/hello-world/" class="archive-article-date">
-  	<time datetime="2021-03-21T12:30:01.940Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
+        <a href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/" class="archive-article-date">
+  	<time datetime="2021-03-27T07:46:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h4 id="Mysql-explain"><a href="#Mysql-explain" class="headerlink" title="Mysql explain"></a>Mysql explain</h4><p>转载：<a target="_blank" rel="noopener" href="https://blog.csdn.net/AAA821/article/details/86440722">https://blog.csdn.net/AAA821/article/details/86440722</a></p>
+<p>表物理上是一个b+树，innodb使用聚簇索引来组织表，默认使用主键作为聚簇索引</p>
+<p>未定义主键，则取第一个唯一索引，并且不包含Null。</p>
+<p>如果没有这样的列，innodb自建一个6位数的id值，并且是隐藏的。</p>
+<p>其他索引就是二级索引</p>
 
       
 
@@ -211,6 +208,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -261,7 +269,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Impersonality/Impersonality.github.io/2021/03/21/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Impersonality/Impersonality.github.io/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,18 +283,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/03/21/mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          mac常用快捷键
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/03/12/git%E5%90%88%E4%BD%9C%E5%BC%80%E5%8F%91/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git合作开发</div>
+    <a href="/2021/03/22/go-viper-cobra-flag/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">go viper/cobra/flag</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -417,6 +416,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">go</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
             
             <div class="clearfix"></div>
