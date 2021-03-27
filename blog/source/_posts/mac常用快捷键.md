@@ -31,3 +31,19 @@ home/end：ctrl + A/E  (fn + ←→)
 前进后退：command + ←→
 
 刷新：command + r
+
+
+
+
+
+##### goland快捷键
+
+设置：command + ,
+
+前进后退：command + option + ←→
+
+进入函数：command + b
+
+Quick documentation：f1 / ctrl + j
+
+Debug / run：ctrl + d / r
