@@ -275,205 +275,6 @@
 
 
   
-    <article id="post-Linux namespace" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Linux-namespace"><a href="#Linux-namespace" class="headerlink" title="Linux namespace"></a>Linux namespace</h4><p>链接：<a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/introduction-to-linux-namespace/">https://zhengyinyong.com/post/introduction-to-linux-namespace/</a></p>
-<p>​           <a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/how-to-use-uts-namespace/">https://zhengyinyong.com/post/how-to-use-uts-namespace/</a></p>
-<p>docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间，可以独立进程id，网络，域名等等。</p>
-<p>namespace开放了3个接口，clone，setns，unshare。用户用c语言实现该接口，就可以调用namespace，其他语言也进行了封装。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd := exec.Command(<span class="string">&quot;sh&quot;</span>)</span><br><span class="line">cmd.SysProcAttr = &amp;syscall.SysProcAttr&#123;</span><br><span class="line">  Cloneflags: syscall.CLONE_NEWUTS,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<table>
-<thead>
-<tr>
-<th><strong>Namespace</strong></th>
-<th><code>clone()</code> <strong>使用的 flag</strong></th>
-<th><strong>所隔离的资源</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Cgroup</td>
-<td>CLONE_NEWCGROUP</td>
-<td>Cgroup 根目录</td>
-</tr>
-<tr>
-<td>IPC</td>
-<td>CLONE_NEWIPC</td>
-<td>System V IPC，POSIX 消息队列</td>
-</tr>
-<tr>
-<td>Network</td>
-<td>CLONE_NEWNET</td>
-<td>网络设备、协议栈、端口等</td>
-</tr>
-<tr>
-<td>Mount</td>
-<td>CLONE_NEWNS</td>
-<td>挂载点</td>
-</tr>
-<tr>
-<td>PID</td>
-<td>CLONE_NEWPID</td>
-<td>进程 ID</td>
-</tr>
-<tr>
-<td>User</td>
-<td>CLONE_NEWUSER</td>
-<td>用户和组 ID</td>
-</tr>
-<tr>
-<td>UTS</td>
-<td>CLONE_NEWUTS</td>
-<td>主机名和域名</td>
-</tr>
-</tbody></table>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/30/Linux%20namespace/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux tools" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>Pstree: 将进程以树状展示的shell工具</p>
-<p>$$: 当前进程id</p>
-<p>proc目录：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26923061">https://zhuanlan.zhihu.com/p/26923061</a></p>
-<p>Ipcs：show information on ipc facilities</p>
-<p>Ipcmk：创建ipc资源</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/30/Linux%20tools/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sql优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>sql优化</p>
-<p>where 会被优化器优化成inner join，连表时最大的表在前</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/27/sql%E4%BC%98%E5%8C%96/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Mysql-一级索引-二级索引" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -579,6 +380,7 @@
 <p>读取配置数据（必需）：viper.ReadInConfig()</p>
 <h4 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h4><p><a target="_blank" rel="noopener" href="https://o-my-chenjian.com/2017/09/20/Using-Flag-And-Pflag-With-Golang/">flag</a></p>
 <p>flag.Int(name, value, usage)：代码中可以设置默认值，然后从命令行读取实际值，当作环境变量使用</p>
+<p>flag.Parse()：解析命令行传递的参数</p>
 <h4 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h4><p><a target="_blank" rel="noopener" href="https://www.qikqiak.com/post/create-cli-app-with-cobra/">cobra</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sparkdev/p/10856077.html">cobra</a></p>
 <p>1.用cobra脚手架cobra init –pkg-name [name] 生成cmd文件夹</p>
@@ -673,6 +475,7 @@
 <p>进入函数：command + b</p>
 <p>Quick documentation：f1 / ctrl + j</p>
 <p>Debug / run：ctrl + d / r</p>
+<p>next/previous tab：shift + command + []</p>
 
       
 

@@ -151,6 +151,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux-cgroups" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/08/linux-cgroups/">linux cgroups</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/08/linux-cgroups/" class="archive-article-date">
+  	<time datetime="2021-04-08T01:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="linux-cgroups"><a href="#linux-cgroups" class="headerlink" title="linux cgroups"></a>linux cgroups</h4><p>Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成</p>
+<p>Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem</p>
+<p>cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy）</p>
+<p>subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个hierarchy上</p>
+<h5 id="创建cgroup"><a href="#创建cgroup" class="headerlink" title="创建cgroup"></a>创建cgroup</h5><p>（mount挂载-t标注cgroup即可：mount -t cgroup [filename] ./[filename]</p>
+<p>  在cgroup文件夹下创建文件夹，会被自动识别为该cgroup的子cgroup（生成文件        </p>
+<p> /proc/[pid]/cgroup  中可以看到该进程属于哪个cgroup</p>
+<p>mount | grep cgroup可以看到hierarchy的根部，挂载了很多subsystem(cgroup类型)，在这些subsystem里创建文件夹(子cgroup)，加入进程id，实现对进程资源的限制。</p>
+<p>在cgroup文件夹cgroup.procs和tasks添加删除pid要用sh -c 操作，删除只需要将pid移动到另一个cgroup中即可</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/08/linux-cgroups/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux-namespace" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

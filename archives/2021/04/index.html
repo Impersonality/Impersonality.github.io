@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
-  <title></title>
+  <title>Archives: 2021/4 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux namespace链接：https:&#x2F;&#x2F;zhengyinyong.com&#x2F;post&#x2F;introduction-to-linux-namespace&#x2F; ​           https:&#x2F;&#x2F;zhengyinyong.com&#x2F;post&#x2F;how-to-use-uts-namespace&#x2F; docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title">
-<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/03/30/Linux%20namespace/index.html">
+<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/archives/2021/04/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Linux namespace链接：https:&#x2F;&#x2F;zhengyinyong.com&#x2F;post&#x2F;introduction-to-linux-namespace&#x2F; ​           https:&#x2F;&#x2F;zhengyinyong.com&#x2F;post&#x2F;how-to-use-uts-namespace&#x2F; docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-30T07:18:04.605Z">
-<meta property="article:modified_time" content="2021-03-30T07:54:33.968Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
@@ -153,172 +149,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux namespace" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-linux-cgroups" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/08/linux-cgroups/">linux cgroups</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/08/linux-cgroups/" class="archive-article-date">
+  	<time datetime="2021-04-08T01:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Linux-namespace"><a href="#Linux-namespace" class="headerlink" title="Linux namespace"></a>Linux namespace</h4><p>链接：<a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/introduction-to-linux-namespace/">https://zhengyinyong.com/post/introduction-to-linux-namespace/</a></p>
-<p>​           <a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/how-to-use-uts-namespace/">https://zhengyinyong.com/post/how-to-use-uts-namespace/</a></p>
-<p>docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间，可以独立进程id，网络，域名等等。</p>
-<p>namespace开放了3个接口，clone，setns，unshare。用户用c语言实现该接口，就可以调用namespace，其他语言也进行了封装。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd := exec.Command(<span class="string">&quot;sh&quot;</span>)</span><br><span class="line">cmd.SysProcAttr = &amp;syscall.SysProcAttr&#123;</span><br><span class="line">  Cloneflags: syscall.CLONE_NEWUTS,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<table>
-<thead>
-<tr>
-<th><strong>Namespace</strong></th>
-<th><code>clone()</code> <strong>使用的 flag</strong></th>
-<th><strong>所隔离的资源</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Cgroup</td>
-<td>CLONE_NEWCGROUP</td>
-<td>Cgroup 根目录</td>
-</tr>
-<tr>
-<td>IPC</td>
-<td>CLONE_NEWIPC</td>
-<td>System V IPC，POSIX 消息队列</td>
-</tr>
-<tr>
-<td>Network</td>
-<td>CLONE_NEWNET</td>
-<td>网络设备、协议栈、端口等</td>
-</tr>
-<tr>
-<td>Mount</td>
-<td>CLONE_NEWNS</td>
-<td>挂载点</td>
-</tr>
-<tr>
-<td>PID</td>
-<td>CLONE_NEWPID</td>
-<td>进程 ID</td>
-</tr>
-<tr>
-<td>User</td>
-<td>CLONE_NEWUSER</td>
-<td>用户和组 ID</td>
-</tr>
-<tr>
-<td>UTS</td>
-<td>CLONE_NEWUTS</td>
-<td>主机名和域名</td>
-</tr>
-</tbody></table>
+        <h4 id="linux-cgroups"><a href="#linux-cgroups" class="headerlink" title="linux cgroups"></a>linux cgroups</h4><p>Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成</p>
+<p>Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem</p>
+<p>cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy）</p>
+<p>subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个hierarchy上</p>
+<h5 id="创建cgroup"><a href="#创建cgroup" class="headerlink" title="创建cgroup"></a>创建cgroup</h5><p>（mount挂载-t标注cgroup即可：mount -t cgroup [filename] ./[filename]</p>
+<p>  在cgroup文件夹下创建文件夹，会被自动识别为该cgroup的子cgroup（生成文件        </p>
+<p> /proc/[pid]/cgroup  中可以看到该进程属于哪个cgroup</p>
+<p>mount | grep cgroup可以看到hierarchy的根部，挂载了很多subsystem(cgroup类型)，在这些subsystem里创建文件夹(子cgroup)，加入进程id，实现对进程资源的限制。</p>
+<p>在cgroup文件夹cgroup.procs和tasks添加删除pid要用sh -c 操作，删除只需要将pid移动到另一个cgroup中即可</p>
 
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
       
 
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/08/linux-cgroups/">展开全文 >></a>
+        </p>
+      
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Impersonality/Impersonality.github.io/2021/03/30/Linux%20namespace/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/03/30/Linux-namespace/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux namespace
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/03/30/Linux%20tools/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -338,16 +231,9 @@
 
 
 
-  
-  
-  
 
   
-
   
-
-  
-
 
           </div>
         </div>
@@ -369,8 +255,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
