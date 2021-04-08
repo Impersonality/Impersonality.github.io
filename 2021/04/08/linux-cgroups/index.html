@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
   <title>linux cgroups | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="linux cgroupsCgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成 Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy） subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个h">
+  <meta name="description" content="Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成 Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy） subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个hierarchy上 创建c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux cgroups">
 <meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/04/08/linux-cgroups/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="linux cgroupsCgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成 Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy） subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个h">
+<meta property="og:description" content="Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成 Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy） subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个hierarchy上 创建c">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-08T01:08:11.000Z">
-<meta property="article:modified_time" content="2021-04-08T01:09:12.081Z">
+<meta property="article:modified_time" content="2021-04-08T08:30:11.580Z">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
   
@@ -174,7 +174,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="linux-cgroups"><a href="#linux-cgroups" class="headerlink" title="linux cgroups"></a>linux cgroups</h4><p>Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成</p>
+        <p>Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成</p>
 <p>Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem</p>
 <p>cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy）</p>
 <p>subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个hierarchy上</p>
@@ -286,6 +286,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/04/08/docker%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          docker实现原理
+        
+      </div>
+    </a>
   
   
     <a href="/2021/03/30/Linux-namespace/" id="article-nav-older" class="article-nav-link-wrap">
@@ -424,6 +433,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">

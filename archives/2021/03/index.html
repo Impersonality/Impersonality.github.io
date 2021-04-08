@@ -171,9 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Linux-namespace"><a href="#Linux-namespace" class="headerlink" title="Linux namespace"></a>Linux namespace</h4><p>链接：<a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/introduction-to-linux-namespace/">https://zhengyinyong.com/post/introduction-to-linux-namespace/</a></p>
-<p>​           <a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/how-to-use-uts-namespace/">https://zhengyinyong.com/post/how-to-use-uts-namespace/</a></p>
-<p>docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间，可以独立进程id，网络，域名等等。</p>
+        <p>docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间，可以独立进程id，网络，域名等等。</p>
 <p>namespace开放了3个接口，clone，setns，unshare。用户用c语言实现该接口，就可以调用namespace，其他语言也进行了封装。</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd := exec.Command(<span class="string">&quot;sh&quot;</span>)</span><br><span class="line">cmd.SysProcAttr = &amp;syscall.SysProcAttr&#123;</span><br><span class="line">  Cloneflags: syscall.CLONE_NEWUTS,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -222,6 +220,8 @@
 <td>主机名和域名</td>
 </tr>
 </tbody></table>
+<p>参考：<a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/introduction-to-linux-namespace/">https://zhengyinyong.com/post/introduction-to-linux-namespace/</a></p>
+<p>​           <a target="_blank" rel="noopener" href="https://zhengyinyong.com/post/how-to-use-uts-namespace/">https://zhengyinyong.com/post/how-to-use-uts-namespace/</a></p>
 
       
 
@@ -373,7 +373,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="go-viper-cobra-flag"><a href="#go-viper-cobra-flag" class="headerlink" title="go viper / cobra / flag"></a>go viper / cobra / flag</h3><h4 id="viper"><a href="#viper" class="headerlink" title="viper"></a>viper</h4><p><a target="_blank" rel="noopener" href="https://blog.biezhi.me/2018/10/load-config-with-viper.html">viper</a></p>
+        <h4 id="viper"><a href="#viper" class="headerlink" title="viper"></a>viper</h4><p><a target="_blank" rel="noopener" href="https://blog.biezhi.me/2018/10/load-config-with-viper.html">viper</a></p>
 <p>获取值：viper.Get()</p>
 <p>设置待读取配置文件名：vipser.SetconfigName()</p>
 <p>设置搜索路径：viper.AddConfigPath(“.”)</p>
@@ -696,6 +696,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
