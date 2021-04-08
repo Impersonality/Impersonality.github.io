@@ -6,8 +6,6 @@ tags: go
 
 
 
-### go viper / cobra / flag
-
 #### viper
 
 [viper](https://blog.biezhi.me/2018/10/load-config-with-viper.html)
@@ -27,6 +25,8 @@ tags: go
 [flag](https://o-my-chenjian.com/2017/09/20/Using-Flag-And-Pflag-With-Golang/)
 
 flag.Int(name, value, usage)：代码中可以设置默认值，然后从命令行读取实际值，当作环境变量使用
+
+flag.Parse()：解析命令行传递的参数
 
 
 

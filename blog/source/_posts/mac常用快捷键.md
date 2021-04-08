@@ -47,3 +47,5 @@ home/end：ctrl + A/E  (fn + ←→)
 Quick documentation：f1 / ctrl + j
 
 Debug / run：ctrl + d / r
+
+next/previous tab：shift + command + []

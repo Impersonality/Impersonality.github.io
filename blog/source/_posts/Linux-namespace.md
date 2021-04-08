@@ -4,12 +4,6 @@ date: 2021-03-30 17:02:46
 tags: linux
 ---
 
-#### Linux namespace
-
-链接：https://zhengyinyong.com/post/introduction-to-linux-namespace/
-
-​		   https://zhengyinyong.com/post/how-to-use-uts-namespace/
-
 
 
 docker 是基于namespace实现，namespace概念和容易很像，抽象出一个资源独立的空间，可以独立进程id，网络，域名等等。
@@ -35,3 +29,8 @@ cmd.SysProcAttr = &syscall.SysProcAttr{
 | User          | CLONE_NEWUSER             | 用户和组 ID                  |
 | UTS           | CLONE_NEWUTS              | 主机名和域名                 |
 
+
+
+参考：https://zhengyinyong.com/post/introduction-to-linux-namespace/
+
+​		   https://zhengyinyong.com/post/how-to-use-uts-namespace/
