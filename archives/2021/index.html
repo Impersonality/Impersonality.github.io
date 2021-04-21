@@ -151,6 +151,96 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sql基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/">sql基础</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/" class="archive-article-date">
+  	<time datetime="2021-04-21T13:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><p>1.注释：单行 –   多行/*</p>
+<p>2.group by子句中不能写列的别名（因为select在group by之后）</p>
+<p>3.group by时，select中字段要求可汇总（聚合函数/或在group by中出现）</p>
+<p>4.想要删除查询结果的重复记录应使用distinct，想要计算汇总结果（聚合函数）使用group by</p>
+<p>5.insert 语句中也可以使用子表（insert into table select …）</p>
+<p>6.where中不能写聚合函数，可以用标量子查询替代，如：where price &gt; (select avg(price) from product)</p>
+<p>7.标量子查询可以写在select 语句后</p>
+<p>8.string拼接用 || 代替 +</p>
+<p>9.not in 后面不能写null</p>
+<h4 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h4><blockquote>
+<p>Q：select * from table group by column    why failed ?</p>
+<p>A：因为group by 是对表切分后汇总（折叠），要求select出的结果字段都是可汇总的，否则会出错</p>
+</blockquote>
+<blockquote>
+<p>where 和 having 执行速度</p>
+<p>通常where更快，因为where可以使用索引，另一方面聚合函数操作时会先排序，用where提前过滤查询数据行数会减少排序压力</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">database</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-docker实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -879,6 +969,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">database</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,13 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
-  <title>Archives: 2021/4 | </title>
+  <title>sql基础 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/archives/2021/04/index.html">
+  <meta name="description" content="知识点1.注释：单行 –   多行&#x2F;* 2.group by子句中不能写列的别名（因为select在group by之后） 3.group by时，select中字段要求可汇总（聚合函数&#x2F;或在group by中出现） 4.想要删除查询结果的重复记录应使用distinct，想要计算汇总结果（聚合函数）使用group by 5.insert 语句中也可以使用子表（insert into table s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql基础">
+<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/04/21/sql%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="知识点1.注释：单行 –   多行&#x2F;* 2.group by子句中不能写列的别名（因为select在group by之后） 3.group by时，select中字段要求可汇总（聚合函数&#x2F;或在group by中出现） 4.想要删除查询结果的重复记录应使用distinct，想要计算汇总结果（聚合函数）使用group by 5.insert 语句中也可以使用子表（insert into table s">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-21T13:45:37.000Z">
+<meta property="article:modified_time" content="2021-04-21T13:48:28.932Z">
+<meta property="article:tag" content="database">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
@@ -149,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-sql基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-sql基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/">sql基础</a>
+    <h1 class="article-title" itemprop="name">
+      sql基础
     </h1>
   
 
@@ -192,6 +195,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -210,16 +234,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Impersonality/Impersonality.github.io/2021/04/21/sql%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/08/docker%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker实现原理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -239,184 +322,16 @@
 
 
 
-
-  
-    <article id="post-docker实现原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/08/docker%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">docker实现原理</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/08/docker%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2021-04-08T08:28:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>公众号看到github推荐项目：go实现的mini docker（gocker），该作者推荐了1000行shell脚本所实现的bocker，对此产生了些兴趣，去网上查，有本书《自己动手写docker》，通过此书了解了docker的大致实现，也尝试写了点，不过还是基础不够扎实，在之后实现镜像和完善容器时，感觉还需要花费很多时间，觉得暂时琢磨到这了吧，以后有需求可以继续深究。</p>
-<p>这里总结一下自己的学习</p>
-<h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><ul>
-<li><h5 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h5><p>linux的隔离工具，可以创建出一个独立的进程空间（类似于容器的概念），有几种隔离模式，mount，pid，user等等</p>
-</li>
-<li><h5 id="cgroups"><a href="#cgroups" class="headerlink" title="cgroups"></a>cgroups</h5><p>linux限制资源的工具，限制cpu，内存，存储等等</p>
-</li>
-<li><h5 id="ufs"><a href="#ufs" class="headerlink" title="ufs"></a>ufs</h5><p>联合文件系统，之前用的是aufs，现在用的是overlay，将不同的存储设备（挂载）抽象成一个存储设备，比如一块光盘和一个u盘，将内容抽象成一块磁盘展示给用户</p>
-</li>
-</ul>
-<h5 id=""><a href="#" class="headerlink" title=""></a></h5><h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><blockquote>
-<p>容器就是使用namespace + cgroups创建出一个独立的空间，先用namespace创建一块空间，隔离模式都选上(mount,pid,user,net等等)，然后修改/proc挂载（mount -t proc proc /proc）这样proc才独立了，再使用cgroups限制资源等等，这样一块空间就开辟出来了，不过这里面是空的，程序怎么加载进去呢</p>
-</blockquote>
-<h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><blockquote>
-<p>简单将程序copy到容器似乎就可以了，不过这样会有问题：1.没有分层镜像会很大，难以管理，比如flask和django都用到了Python，如果将python和底层unix系统抽象出来好像更好；2.在容器中会修改镜像的内容，那么下次还原或者恢复时又得重新下载。</p>
-<p>所以docker使用了ufs，镜像分层，同时镜像都是只读层，最上面有一个可写层，对镜像的修改会在其他的存储。</p>
-<p>参考：<a target="_blank" rel="noopener" href="https://coolshell.cn/articles/17061.html">coolshell aufs</a></p>
-</blockquote>
-<p>总结的很简单，不过docker本身也不复杂，好的设计本身也是用简单的办法去解决“庞大”问题，docker，nginx，redis都是如此。</p>
-<p>还有些细节没有去深究了，比如数据卷，网络，以后有兴趣再补</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/08/docker%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linux-cgroups" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/08/linux-cgroups/">linux cgroups</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/08/linux-cgroups/" class="archive-article-date">
-  	<time datetime="2021-04-08T01:08:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Cgroups是linux用来隔离资源（cpu、mem)的技术，由3个组件组成</p>
-<p>Hierarchy：将cgroup串成树状的结构，通过树状结构，cgroup可以继承，可以绑定多个subsystem</p>
-<p>cgroup：hierarchy的节点，进程可以加入一个或者多个cgroup（不同的hierarchy）</p>
-<p>subsystem：系统资源的限制，比如cpu限制等，需要绑定在一个hierarchy上</p>
-<h5 id="创建cgroup"><a href="#创建cgroup" class="headerlink" title="创建cgroup"></a>创建cgroup</h5><p>（mount挂载-t标注cgroup即可：mount -t cgroup [filename] ./[filename]</p>
-<p>  在cgroup文件夹下创建文件夹，会被自动识别为该cgroup的子cgroup（生成文件        </p>
-<p> /proc/[pid]/cgroup  中可以看到该进程属于哪个cgroup</p>
-<p>mount | grep cgroup可以看到hierarchy的根部，挂载了很多subsystem(cgroup类型)，在这些subsystem里创建文件夹(子cgroup)，加入进程id，实现对进程资源的限制。</p>
-<p>在cgroup文件夹cgroup.procs和tasks添加删除pid要用sh -c 操作，删除只需要将pid移动到另一个cgroup中即可</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/08/linux-cgroups/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+  
+
+  
+
+  
+
+  
+
 
           </div>
         </div>
@@ -438,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
