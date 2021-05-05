@@ -151,6 +151,174 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-gdb-常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/23/gdb-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">gdb 常用命令</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/23/gdb-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2021-04-23T06:40:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ol>
+<li>s ：执行一行源码程序，若有函数则进入（step into）</li>
+<li>si：汇编版的s命令</li>
+<li>c：继续执行，知道下一个断点停止（continue</li>
+</ol>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b7896e9afeb7">https://www.jianshu.com/p/b7896e9afeb7</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/23/gdb-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-6-828-lab1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/23/6-828-lab1/">6.828 lab1</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/23/6-828-lab1/" class="archive-article-date">
+  	<time datetime="2021-04-23T01:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/gatsby123/p/9746193.html">https://www.cnblogs.com/gatsby123/p/9746193.html</a></p>
+<p>​    <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/74028717">https://zhuanlan.zhihu.com/p/74028717</a></p>
+<p>​    <a target="_blank" rel="noopener" href="https://www.dingmos.com/2020/07/24/23.html">https://www.dingmos.com/2020/07/24/23.html</a></p>
+<p>久闻6.828大名，以前就想学习，不过官网的schedule看不懂，xv6 doc/source看不懂（英语真的重要），被劝退了。现在6.828火了，博客技术文章越来越多，更适合学习了。我打算先上手lab，lab遇到问题再从点及面学习</p>
+<p>lab1需要从git安装源码，然后用qemu运行xv6（qemu：能构造x86机器的模拟器），安装qemu时会遇到一些报错，比如make qemu时需要换成make qemu-nox(非图形界面)，ctrl + a，再按c可推出虚拟机器</p>
+<h4 id="part1"><a href="#part1" class="headerlink" title="part1"></a>part1</h4><p>然后使用qemu和gdb来调试xv6</p>
+<p>调试步骤1.先打开一个terminal来到lab下   make qemu-gdb</p>
+<p>​             2.打开另一个terminal来到lab下，make gdb  进入qemu的调试模式，会一行一行输出汇编命令</p>
+<p>​             3.si进入下一条命令，调试</p>
+<p>看不懂si调试的汇编命令，网上查了下，大概是bios对设备初始化，然后找到boot loader，把控制权交给boot loader</p>
+<h5 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h5><blockquote>
+<p><strong>cs,ip寄存器</strong><br>cs:ip寄存器存放的将要执行命令的地址，cs(段基址)+ip(段内偏移) cs左移4位+ip=真实地址<br>jump命令实际上是修改了cs:ip的内容，跳向下条要执行的命令</p>
+<p><strong>实模式 保护模式</strong></p>
+<p>实模式：早期8086寄存器是16位，cpu是20位，所以需要偏移，cs(段基址)+ip(段内偏移) cs左移4位+ip=真实地址是访问内存地址的模式</p>
+<p>保护模式：实模式程序可以访问任何地址，不安全，保护模式应需而生，段寄存器不再存放段基址，存放段选择子（段描述符的索引，段描述符长度64位，32位存放段基址，剩下记录段信息；段描述符存在于全局描述符GDT内），本质就是段基址要通过索引查询获得，拼接偏移得到线性地址，如果有分页机制，还需要分页机构转换得到物理地址</p>
+</blockquote>
+<h4 id="part2"><a href="#part2" class="headerlink" title="part2"></a>part2</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/23/6-828-lab1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sql基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -529,6 +697,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">database</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">计组</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">os</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
               </li>
             
             <div class="clearfix"></div>
