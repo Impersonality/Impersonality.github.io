@@ -151,6 +151,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-os中的-链接" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/">os中的&#39;链接&#39;</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/" class="archive-article-date">
+  	<time datetime="2021-05-31T14:40:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="链接的含义"><a href="#链接的含义" class="headerlink" title="链接的含义"></a>链接的含义</h4><p>代码到可执行文件，首先通过编译器和汇编器生成<strong>可重定位目标文件</strong>，再通过链接器生成<strong>可执行目标文件</strong>。</p>
+<p>编译器主要完成两个任务：</p>
+<ul>
+<li>符号解析（符号指的是函数、变量）：将每个符号的引用和一个符号的定义关联</li>
+<li>重定位：编译器生成可重定位目标文件时，从地址0开始写入代码和数字节，链接器将符号定义的内存位置关联，再将符号引用指向符号定义</li>
+</ul>
+<h4 id="符号解析"><a href="#符号解析" class="headerlink" title="符号解析"></a>符号解析</h4><p>静态库以<strong>存档</strong>（.a文件）的特殊格式存放在磁盘，有一个头部描述各个成员目标文件的大小和位置</p>
+<p>链接器最后链接库，并且遵守库之间的引用顺序</p>
+<h4 id="重定位"><a href="#重定位" class="headerlink" title="重定位"></a>重定位</h4><p>当汇编器遇到未知变量时，会生成一个<strong>重定位条目</strong>,放在rel.text/rel.data中</p>
+<h4 id="库打桩机制"><a href="#库打桩机制" class="headerlink" title="库打桩机制"></a>库打桩机制</h4><p>在编译、链接、运行时，可以截获对库函数的调用，换成自己的代码。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-cpu对if语句的预测" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -926,84 +1009,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/22/go-viper-cobra-flag/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-mac常用快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/21/mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">mac常用快捷键</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/21/mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2021-03-21T12:43:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="全局"><a href="#全局" class="headerlink" title="全局"></a>全局</h5><p>复制/粘贴：command + c/v</p>
-<p>关闭当前页面：command + w</p>
-<p>切换程序：command + tab</p>
-<p>搜索：command + space（搜索term</p>
-<p>home/end：ctrl + A/E  (fn + ←→)</p>
-<p>切换输入法：ctrl + space</p>
-<p>全屏：ctrl + command + f</p>
-<p>最小化：command + m</p>
-<h5 id="chrome快捷键"><a href="#chrome快捷键" class="headerlink" title="chrome快捷键"></a>chrome快捷键</h5><p>前进后退：command + ←→</p>
-<p>刷新：command + r</p>
-<h5 id="goland快捷键"><a href="#goland快捷键" class="headerlink" title="goland快捷键"></a>goland快捷键</h5><p>设置：command + ,</p>
-<p>前进后退：command + option + ←→</p>
-<p>进入函数：command + b</p>
-<p>Quick documentation：f1 / ctrl + j</p>
-<p>Debug / run：ctrl + d / r</p>
-<p>next/previous tab：shift + command + []</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/21/mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">展开全文 >></a>
         </p>
       
 

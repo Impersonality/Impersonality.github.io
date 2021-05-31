@@ -6,18 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Impersonality/Impersonality.github.io">
-  <title>cpu对if语句的预测 | </title>
+  <title>os中的&#39;链接&#39; | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="机器指令与流水线cpu执行机器指令需要4个步骤：取指、译码、执行、回写，这些阶段分别由特定的硬件执行，采用工厂流水线方式。比如硬件A取指 指令1，然后取指 指令2，取指之后的指令都交付给硬件B译码，理论上4个硬件同时工作，在同一时刻就能完成一条指令的执行。 if指令问题：if指令需要等待if条件的结果，他也可以流水线执行么 我想的是不能，cpu让其阻塞等待，或者设置一个if等待区。 事实是可以的，">
+  <meta name="description" content="链接的含义代码到可执行文件，首先通过编译器和汇编器生成可重定位目标文件，再通过链接器生成可执行目标文件。 编译器主要完成两个任务：  符号解析（符号指的是函数、变量）：将每个符号的引用和一个符号的定义关联 重定位：编译器生成可重定位目标文件时，从地址0开始写入代码和数字节，链接器将符号定义的内存位置关联，再将符号引用指向符号定义  符号解析静态库以存档（.a文件）的特殊格式存放在磁盘，有一个头部描">
 <meta property="og:type" content="article">
-<meta property="og:title" content="cpu对if语句的预测">
-<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/05/05/cpu%E5%AF%B9if%E8%AF%AD%E5%8F%A5%E7%9A%84%E9%A2%84%E6%B5%8B/index.html">
+<meta property="og:title" content="os中的&#39;链接&#39;">
+<meta property="og:url" content="https://github.com/Impersonality/Impersonality.github.io/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="机器指令与流水线cpu执行机器指令需要4个步骤：取指、译码、执行、回写，这些阶段分别由特定的硬件执行，采用工厂流水线方式。比如硬件A取指 指令1，然后取指 指令2，取指之后的指令都交付给硬件B译码，理论上4个硬件同时工作，在同一时刻就能完成一条指令的执行。 if指令问题：if指令需要等待if条件的结果，他也可以流水线执行么 我想的是不能，cpu让其阻塞等待，或者设置一个if等待区。 事实是可以的，">
+<meta property="og:description" content="链接的含义代码到可执行文件，首先通过编译器和汇编器生成可重定位目标文件，再通过链接器生成可执行目标文件。 编译器主要完成两个任务：  符号解析（符号指的是函数、变量）：将每个符号的引用和一个符号的定义关联 重定位：编译器生成可重定位目标文件时，从地址0开始写入代码和数字节，链接器将符号定义的内存位置关联，再将符号引用指向符号定义  符号解析静态库以存档（.a文件）的特殊格式存放在磁盘，有一个头部描">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-05T14:42:31.000Z">
-<meta property="article:modified_time" content="2021-05-05T14:58:56.529Z">
-<meta property="article:tag" content="计组">
+<meta property="article:published_time" content="2021-05-31T14:40:24.000Z">
+<meta property="article:modified_time" content="2021-05-31T15:11:09.299Z">
+<meta property="article:tag" content="os">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="" type="application/atom+xml">
@@ -154,35 +154,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-cpu对if语句的预测" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-os中的-链接" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      cpu对if语句的预测
+      os中的&#39;链接&#39;
     </h1>
   
 
         
-        <a href="/2021/05/05/cpu%E5%AF%B9if%E8%AF%AD%E5%8F%A5%E7%9A%84%E9%A2%84%E6%B5%8B/" class="archive-article-date">
-  	<time datetime="2021-05-05T14:42:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-05</time>
+        <a href="/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/" class="archive-article-date">
+  	<time datetime="2021-05-31T14:40:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-31</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="机器指令与流水线"><a href="#机器指令与流水线" class="headerlink" title="机器指令与流水线"></a>机器指令与流水线</h4><p>cpu执行机器指令需要4个步骤：取指、译码、执行、回写，这些阶段分别由特定的硬件执行，采用工厂流水线方式。比如硬件A取指 指令1，然后取指 指令2，取指之后的指令都交付给硬件B译码，理论上4个硬件同时工作，在同一时刻就能完成一条指令的执行。</p>
-<h4 id="if指令"><a href="#if指令" class="headerlink" title="if指令"></a>if指令</h4><p>问题：if指令需要等待if条件的结果，他也可以流水线执行么</p>
-<p>我想的是不能，cpu让其阻塞等待，或者设置一个if等待区。</p>
-<p>事实是可以的，解决办法是<strong>猜</strong></p>
-<p>cpu根据特定策略猜if会走的分支，然后流水线执行，如果猜对无事发生，猜错则该指令的后续指令全部作废，重新执行，该过程叫<strong>分支预测</strong></p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>一个小细节：编写if语句，最好有一定规律，让cpu猜对（太完美主义了。。。）比如for循环数组时，if判断，这个数组如果有序对分支预测是有帮助的</p>
-<p>好吧，实际中没必要这么追求效率，分支预测的性能损失并不大，而且不了解其策略说不定适得其反。</p>
-<p>只是觉得改知识点挺有意思</p>
-<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/369942218">https://zhuanlan.zhihu.com/p/369942218</a></p>
+        <h4 id="链接的含义"><a href="#链接的含义" class="headerlink" title="链接的含义"></a>链接的含义</h4><p>代码到可执行文件，首先通过编译器和汇编器生成<strong>可重定位目标文件</strong>，再通过链接器生成<strong>可执行目标文件</strong>。</p>
+<p>编译器主要完成两个任务：</p>
+<ul>
+<li>符号解析（符号指的是函数、变量）：将每个符号的引用和一个符号的定义关联</li>
+<li>重定位：编译器生成可重定位目标文件时，从地址0开始写入代码和数字节，链接器将符号定义的内存位置关联，再将符号引用指向符号定义</li>
+</ul>
+<h4 id="符号解析"><a href="#符号解析" class="headerlink" title="符号解析"></a>符号解析</h4><p>静态库以<strong>存档</strong>（.a文件）的特殊格式存放在磁盘，有一个头部描述各个成员目标文件的大小和位置</p>
+<p>链接器最后链接库，并且遵守库之间的引用顺序</p>
+<h4 id="重定位"><a href="#重定位" class="headerlink" title="重定位"></a>重定位</h4><p>当汇编器遇到未知变量时，会生成一个<strong>重定位条目</strong>,放在rel.text/rel.data中</p>
+<h4 id="库打桩机制"><a href="#库打桩机制" class="headerlink" title="库打桩机制"></a>库打桩机制</h4><p>在编译、链接、运行时，可以截获对库函数的调用，换成自己的代码。</p>
 
       
 
@@ -217,7 +218,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">计组</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
         		</li>
       		
 		</ul>
@@ -273,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Impersonality/Impersonality.github.io/2021/05/05/cpu%E5%AF%B9if%E8%AF%AD%E5%8F%A5%E7%9A%84%E9%A2%84%E6%B5%8B/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/Impersonality/Impersonality.github.io/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -287,18 +288,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/05/31/os%E4%B8%AD%E7%9A%84-%E9%93%BE%E6%8E%A5/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          os中的&#39;链接&#39;
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/04/23/gdb-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">gdb 常用命令</div>
+    <a href="/2021/05/05/cpu%E5%AF%B9if%E8%AF%AD%E5%8F%A5%E7%9A%84%E9%A2%84%E6%B5%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">cpu对if语句的预测</div>
       <i class="icon-circle-right"></i>
     </a>
   
