@@ -151,6 +151,98 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-os-异常控制流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/01/os-%E5%BC%82%E5%B8%B8%E6%8E%A7%E5%88%B6%E6%B5%81/">os-异常控制流</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/01/os-%E5%BC%82%E5%B8%B8%E6%8E%A7%E5%88%B6%E6%B5%81/" class="archive-article-date">
+  	<time datetime="2021-06-01T14:03:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="异常类别"><a href="#异常类别" class="headerlink" title="异常类别"></a>异常类别</h5><ul>
+<li>中断（interrupt)</li>
+<li>陷阱（trap)：system call</li>
+<li>故障（fault)：缺页故障，可能有返回</li>
+<li>终止（abort)：无返回，直接终止</li>
+</ul>
+<h5 id="用户模式和内核模式"><a href="#用户模式和内核模式" class="headerlink" title="用户模式和内核模式"></a>用户模式和内核模式</h5><p>通过某个控制寄存器中的一个模式位来识别</p>
+<h5 id="system-call"><a href="#system-call" class="headerlink" title="system call"></a>system call</h5><ul>
+<li>fork：1.调用一次，返回两次（父、子）2.并发执行  3.相同但独立的地址空间 4.共享文件</li>
+<li>execve：调用一次从不返回</li>
+<li>waitpid：等待终止或停止时，回收子进程</li>
+</ul>
+<h5 id="父子进程"><a href="#父子进程" class="headerlink" title="父子进程"></a>父子进程</h5><p>父进程终止，内核会安排init进程（pid=1)成为它孤儿进程的养父</p>
+<p>终止但未回收的进程成为僵尸进程</p>
+<h5 id="信号"><a href="#信号" class="headerlink" title="信号"></a>信号</h5><ul>
+<li>内核通过更新目的进程context发送信号</li>
+<li>kill 命令可向其他进程发送信号，kill [signal] (pid) 若pid为负，向该pid所在的进程组所有进程发送信号</li>
+</ul>
+<h5 id="非本地跳转"><a href="#非本地跳转" class="headerlink" title="非本地跳转"></a>非本地跳转</h5><p>setjmp保存当前context，longjmp取出context</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/os-%E5%BC%82%E5%B8%B8%E6%8E%A7%E5%88%B6%E6%B5%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-os中的-链接" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -922,93 +1014,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-go-viper-cobra-flag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/22/go-viper-cobra-flag/">go viper/cobra/flag</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/22/go-viper-cobra-flag/" class="archive-article-date">
-  	<time datetime="2021-03-22T13:18:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="viper"><a href="#viper" class="headerlink" title="viper"></a>viper</h4><p><a target="_blank" rel="noopener" href="https://blog.biezhi.me/2018/10/load-config-with-viper.html">viper</a></p>
-<p>获取值：viper.Get()</p>
-<p>设置待读取配置文件名：vipser.SetconfigName()</p>
-<p>设置搜索路径：viper.AddConfigPath(“.”)</p>
-<p>读取配置数据（必需）：viper.ReadInConfig()</p>
-<h4 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h4><p><a target="_blank" rel="noopener" href="https://o-my-chenjian.com/2017/09/20/Using-Flag-And-Pflag-With-Golang/">flag</a></p>
-<p>flag.Int(name, value, usage)：代码中可以设置默认值，然后从命令行读取实际值，当作环境变量使用</p>
-<p>flag.Parse()：解析命令行传递的参数</p>
-<h4 id="cobra"><a href="#cobra" class="headerlink" title="cobra"></a>cobra</h4><p><a target="_blank" rel="noopener" href="https://www.qikqiak.com/post/create-cli-app-with-cobra/">cobra</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sparkdev/p/10856077.html">cobra</a></p>
-<p>1.用cobra脚手架cobra init –pkg-name [name] 生成cmd文件夹</p>
-<p>2.root.go中包含rootCmd，这是根命令，cmd.AddCommand生成子命令</p>
-<p>3.command执行是通过command.run实现，在run前后还有几个方法，执行顺序是：</p>
-<p>​    1.persistentPreRun    2.PreRun    3.Run    4.PostRun    5.PersistentPostRun    </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">go</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/22/go-viper-cobra-flag/">展开全文 >></a>
         </p>
       
 
