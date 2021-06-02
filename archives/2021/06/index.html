@@ -151,6 +151,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-write-and-fsync" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/02/write-and-fsync/">write and fsync</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/02/write-and-fsync/" class="archive-article-date">
+  	<time datetime="2021-06-02T13:59:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>github上看到一个用go做的简易kv数据库，它存储数据就是将数据通过写文件的方式，从内存写入磁盘。写的时候分了两步，先write，再sync。因为我不懂sync是在做什么，便去查了下</p>
+<h4 id="同步io函数sync，fsync，fdata"><a href="#同步io函数sync，fsync，fdata" class="headerlink" title="同步io函数sync，fsync，fdata"></a>同步io函数sync，fsync，fdata</h4><p><strong>传统unix实现内核中，在写文件时，先将数据写入缓存，等到缓存满或者需要改缓冲区才将缓冲区写入磁盘。这种方式成为延迟写。</strong></p>
+<ul>
+<li>sync：将修改过的缓冲块排入写队列，然后立即返回，不等待返回结果</li>
+<li>fsync：等待写磁盘结束，返回结果，并同步更新文件属性</li>
+<li>fdata：类似于fsync，不过只影响数据部分，不影响属性</li>
+</ul>
+<p>go的file.sync函数调用了system call的fsync函数，所以数据库项目需要调该函数进行真正的数据持久化</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">db</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/02/write-and-fsync/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-os-异常控制流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -368,6 +449,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">db</a>
               </li>
             
             <div class="clearfix"></div>

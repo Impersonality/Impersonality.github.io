@@ -151,6 +151,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Mysql-一级索引-二级索引" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/">Mysql 一级索引 二级索引</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/" class="archive-article-date">
+  	<time datetime="2021-03-27T07:46:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Mysql-explain"><a href="#Mysql-explain" class="headerlink" title="Mysql explain"></a>Mysql explain</h4><p>转载：<a target="_blank" rel="noopener" href="https://blog.csdn.net/AAA821/article/details/86440722">https://blog.csdn.net/AAA821/article/details/86440722</a></p>
+<p>表物理上是一个b+树，innodb使用聚簇索引来组织表，默认使用主键作为聚簇索引</p>
+<p>未定义主键，则取第一个唯一索引，并且不包含Null。</p>
+<p>如果没有这样的列，innodb自建一个6位数的id值，并且是隐藏的。</p>
+<p>其他索引就是二级索引</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/27/Mysql-%E4%B8%80%E7%BA%A7%E7%B4%A2%E5%BC%95-%E4%BA%8C%E7%BA%A7%E7%B4%A2%E5%BC%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-go-viper-cobra-flag" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -523,6 +601,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">db</a>
               </li>
             
             <div class="clearfix"></div>
