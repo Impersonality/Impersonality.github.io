@@ -151,6 +151,139 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-docker-link参数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/22/docker-link%E5%8F%82%E6%95%B0/">docker --link参数</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/22/docker-link%E5%8F%82%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2021-06-22T15:00:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>容器间的通信可以使用–link参数</p>
+<p>源容器正常启动，接受容器加上–link参数，如：</p>
+<p>docker run –link db:aliasdb -d nginx</p>
+<p>接受容器可以使用 db或者aliasdb作为源容器的ip，并且可以网络通信，接受容器还可以获取源容器暴露的环境变量，命令中-e 或-env的变量</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/22/docker-link%E5%8F%82%E6%95%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-rosedb解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Q:</p>
+<p>1.where to store the real data        /tmp/rosedb_server</p>
+<p>2.how to balance updating string </p>
+<p>3.what is the form of disk data</p>
+<p>4.what is jump list</p>
+<p>A:</p>
+<p>2.init read all data file from disk ，and build the index of string，the new data would cover older datas in the step of build index</p>
+<p>supply</p>
+<p>1.testing   func run(t *testing.T)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/12/rosedb%E8%A7%A3%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-write-and-fsync" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
