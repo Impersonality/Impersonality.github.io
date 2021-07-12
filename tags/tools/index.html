@@ -151,6 +151,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-rabbitmq使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/12/rabbitmq%E4%BD%BF%E7%94%A8/">rabbitmq使用</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/12/rabbitmq%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-07-12T12:16:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>rabbitmq是一款使用erlang开发，实现amqp的开源消息中间件</p>
+<h5 id="rabbitmq的组成"><a href="#rabbitmq的组成" class="headerlink" title="rabbitmq的组成"></a>rabbitmq的组成</h5><ul>
+<li>broker：消息队列服务进程。包括：exchange和queue</li>
+<li>exchange：消息队列交换机。按一定规则将消息转发到某个队列</li>
+<li>queue：消息队列。存储消息的地方</li>
+<li>producer：生产者</li>
+<li>consumer：消费者</li>
+</ul>
+<h5 id="exchange四种类型"><a href="#exchange四种类型" class="headerlink" title="exchange四种类型"></a>exchange四种类型</h5><ol>
+<li>direct：绑定一个队列，routing key = binding key，点对点发送消息</li>
+<li>fanout：绑定多个队列，将消息广播到所有绑定的队列</li>
+<li>topic：绑定多个队列，根据通配符，匹配routing key = binding key 的队列</li>
+<li>headers：绑定多个队列，根据headers中的信息匹配队列</li>
+</ol>
+<h5 id="死信交换机（死信队列）"><a href="#死信交换机（死信队列）" class="headerlink" title="死信交换机（死信队列）"></a>死信交换机（死信队列）</h5><p>DLX，dead-letter-exchange，当消息在一个队列中变成死信后，它能被重新publish到另一个exchange。消息变成死信有以下几种情况：</p>
+<ul>
+<li>消息被拒绝，并且requeue=false</li>
+<li>消息ttl过期</li>
+<li>队列达到最大长度</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/12/rabbitmq%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-gdb-常用命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

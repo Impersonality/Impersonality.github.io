@@ -151,6 +151,172 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-rabbitmq使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/12/rabbitmq%E4%BD%BF%E7%94%A8/">rabbitmq使用</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/12/rabbitmq%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-07-12T12:16:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>rabbitmq是一款使用erlang开发，实现amqp的开源消息中间件</p>
+<h5 id="rabbitmq的组成"><a href="#rabbitmq的组成" class="headerlink" title="rabbitmq的组成"></a>rabbitmq的组成</h5><ul>
+<li>broker：消息队列服务进程。包括：exchange和queue</li>
+<li>exchange：消息队列交换机。按一定规则将消息转发到某个队列</li>
+<li>queue：消息队列。存储消息的地方</li>
+<li>producer：生产者</li>
+<li>consumer：消费者</li>
+</ul>
+<h5 id="exchange四种类型"><a href="#exchange四种类型" class="headerlink" title="exchange四种类型"></a>exchange四种类型</h5><ol>
+<li>direct：绑定一个队列，routing key = binding key，点对点发送消息</li>
+<li>fanout：绑定多个队列，将消息广播到所有绑定的队列</li>
+<li>topic：绑定多个队列，根据通配符，匹配routing key = binding key 的队列</li>
+<li>headers：绑定多个队列，根据headers中的信息匹配队列</li>
+</ol>
+<h5 id="死信交换机（死信队列）"><a href="#死信交换机（死信队列）" class="headerlink" title="死信交换机（死信队列）"></a>死信交换机（死信队列）</h5><p>DLX，dead-letter-exchange，当消息在一个队列中变成死信后，它能被重新publish到另一个exchange。消息变成死信有以下几种情况：</p>
+<ul>
+<li>消息被拒绝，并且requeue=false</li>
+<li>消息ttl过期</li>
+<li>队列达到最大长度</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/12/rabbitmq%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-b树-b-树-红黑树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/26/b%E6%A0%91-b-%E6%A0%91-%E7%BA%A2%E9%BB%91%E6%A0%91/">b树 b+树 红黑树</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/26/b%E6%A0%91-b-%E6%A0%91-%E7%BA%A2%E9%BB%91%E6%A0%91/" class="archive-article-date">
+  	<time datetime="2021-06-26T12:42:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">algorithm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/26/b%E6%A0%91-b-%E6%A0%91-%E7%BA%A2%E9%BB%91%E6%A0%91/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-uuid和雪花算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -758,185 +924,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/23/gdb-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-6-828-lab1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/23/6-828-lab1/">6.828 lab1</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/23/6-828-lab1/" class="archive-article-date">
-  	<time datetime="2021-04-23T01:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/gatsby123/p/9746193.html">https://www.cnblogs.com/gatsby123/p/9746193.html</a></p>
-<p>​    <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/74028717">https://zhuanlan.zhihu.com/p/74028717</a></p>
-<p>​    <a target="_blank" rel="noopener" href="https://www.dingmos.com/2020/07/24/23.html">https://www.dingmos.com/2020/07/24/23.html</a></p>
-<p>久闻6.828大名，以前就想学习，不过官网的schedule看不懂，xv6 doc/source看不懂（英语真的重要），被劝退了。现在6.828火了，博客技术文章越来越多，更适合学习了。我打算先上手lab，lab遇到问题再从点及面学习</p>
-<p>lab1需要从git安装源码，然后用qemu运行xv6（qemu：能构造x86机器的模拟器），安装qemu时会遇到一些报错，比如make qemu时需要换成make qemu-nox(非图形界面)，ctrl + a，再按c可推出虚拟机器</p>
-<h4 id="part1"><a href="#part1" class="headerlink" title="part1"></a>part1</h4><p>然后使用qemu和gdb来调试xv6</p>
-<p>调试步骤1.先打开一个terminal来到lab下   make qemu-gdb</p>
-<p>​             2.打开另一个terminal来到lab下，make gdb  进入qemu的调试模式，会一行一行输出汇编命令</p>
-<p>​             3.si进入下一条命令，调试</p>
-<p>看不懂si调试的汇编命令，网上查了下，大概是bios对设备初始化，然后找到boot loader，把控制权交给boot loader</p>
-<h5 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h5><blockquote>
-<p><strong>cs,ip寄存器</strong><br>cs:ip寄存器存放的将要执行命令的地址，cs(段基址)+ip(段内偏移) cs左移4位+ip=真实地址<br>jump命令实际上是修改了cs:ip的内容，跳向下条要执行的命令</p>
-<p><strong>实模式 保护模式</strong></p>
-<p>实模式：早期8086寄存器是16位，cpu是20位，所以需要偏移，cs(段基址)+ip(段内偏移) cs左移4位+ip=真实地址是访问内存地址的模式</p>
-<p>保护模式：实模式程序可以访问任何地址，不安全，保护模式应需而生，段寄存器不再存放段基址，存放段选择子（段描述符的索引，段描述符长度64位，32位存放段基址，剩下记录段信息；段描述符存在于全局描述符GDT内），本质就是段基址要通过索引查询获得，拼接偏移得到线性地址，如果有分页机制，还需要分页机构转换得到物理地址</p>
-</blockquote>
-<h4 id="part2"><a href="#part2" class="headerlink" title="part2"></a>part2</h4>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">os</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/23/6-828-lab1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sql基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/">sql基础</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2021-04-21T13:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><p>1.注释：单行 –   多行/*</p>
-<p>2.group by子句中不能写列的别名（因为select在group by之后）</p>
-<p>3.group by时，select中字段要求可汇总（聚合函数/或在group by中出现）</p>
-<p>4.想要删除查询结果的重复记录应使用distinct，想要计算汇总结果（聚合函数）使用group by</p>
-<p>5.insert 语句中也可以使用子表（insert into table select …）</p>
-<p>6.where中不能写聚合函数，可以用标量子查询替代，如：where price &gt; (select avg(price) from product)</p>
-<p>7.标量子查询可以写在select 语句后</p>
-<p>8.string拼接用 || 代替 +</p>
-<p>9.not in 后面不能写null</p>
-<h4 id="QA"><a href="#QA" class="headerlink" title="QA"></a>QA</h4><blockquote>
-<p>Q：select * from table group by column    why failed ?</p>
-<p>A：因为group by 是对表切分后汇总（折叠），要求select出的结果字段都是可汇总的，否则会出错</p>
-</blockquote>
-<blockquote>
-<p>where 和 having 执行速度</p>
-<p>通常where更快，因为where可以使用索引，另一方面聚合函数操作时会先排序，用where提前过滤查询数据行数会减少排序压力</p>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">database</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/21/sql%E5%9F%BA%E7%A1%80/">展开全文 >></a>
         </p>
       
 
